@@ -13,12 +13,19 @@ class Group extends React.Component {
       };
   }
 
-  printButtons(n) {
+
+  //render
+  renderButtons(n) {
     var buttons = []
     for (let i=0; i<n; i++){
-      buttons.push(<Button button={i+1}/>);
+      buttons.push(<Button button={i+1}
+                           onClick={() => this.handleButton(this.props.group, this.props.button)}
+      />);
     }
     return buttons;
+  }
+  handleButton(i, j) {
+    alert('This is group #' + {i} + 'and button #' + {j});
   }
 
 
@@ -26,8 +33,8 @@ class Group extends React.Component {
   
     return (
       <div className="group">
-        <h2>Group {this.props.group}</h2>
-        {this.printButtons(this.props.button)}
+        <h2>Box #{this.props.group}</h2>
+        {this.renderButtons(this.props.button)}
       </div>
       );
     }
