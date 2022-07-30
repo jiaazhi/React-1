@@ -51,8 +51,10 @@ class Board extends React.Component {
                 <input type="number" onChange={this.getGroupInput}></input>
                 <p>{this.state.groupNumber}</p>
                 <br></br>
+
                 <label>Buttons: </label>
                 <input type="number" onChange={this.getButtonInput}></input>
+                
                 <p>Number of Groups is {this.state.group}</p>
                 <p>Number of Buttons is {this.state.button}</p>
                 <p>{this.printGroup(this.state.group)}</p>
