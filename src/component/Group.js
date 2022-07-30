@@ -16,7 +16,7 @@ class Group extends React.Component {
   printButtons(n) {
     var buttons = []
     for (let i=0; i<n; i++){
-      buttons.push(<Button button={this.props.button} />);
+      buttons.push(<Button button={i+1}/>);
     }
     return buttons;
   }
@@ -26,9 +26,7 @@ class Group extends React.Component {
   
     return (
       <div className="group">
-        <h2>Group</h2>
-        <p>Number of Groups is {this.props.group}</p>
-        <p>Number of Buttons is {this.props.button}</p>
+        <h2>Group {this.props.group}</h2>
         {this.printButtons(this.props.button)}
       </div>
       );

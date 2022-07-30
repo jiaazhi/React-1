@@ -32,13 +32,12 @@ class Board extends React.Component {
     handleSubmit(event) {
         alert('Group ' + this.state.group + ' Button ' + this.state.button);
         event.preventDefault();
-        
     }
 
     printGroup(n) {
         var groups = []
         for ( let i = 0; i < n; i ++) {
-          groups.push(<Group group={this.state.group} button={this.state.button}/>)
+          groups.push(<Group group={i+1} button={this.state.button}/>)
         }
         return groups;
       }
@@ -48,14 +47,14 @@ class Board extends React.Component {
         return (
             <>
             <form onSubmit={this.handleSubmit}>
-                <label>Number of Groups: </label>
+                <label>Groups: </label>
                 <input type="number" onChange={this.getGroupInput}></input>
                 <p>{this.state.groupNumber}</p>
                 <br></br>
-                <label>Number of Buttons:</label>
+                <label>Buttons: </label>
                 <input type="number" onChange={this.getButtonInput}></input>
-                <input type="submit" value="Submit" />
-
+                <p>Number of Groups is {this.state.group}</p>
+                <p>Number of Buttons is {this.state.button}</p>
                 <p>{this.printGroup(this.state.group)}</p>
             </form>
             

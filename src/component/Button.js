@@ -2,7 +2,7 @@ function Button(props){
 
     
     return (
-        <button>{props.button}</button>
+        <button>This is button {props.button}</button>
     )
 
 }
