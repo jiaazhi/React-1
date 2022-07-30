@@ -1,0 +1,18 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+  }
+
+  .group {
+    display:grid;
+    background: rgb(236, 179, 170);
+    border: 1px solid rgb(100, 25, 25);
+    float: left;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    height: auto;
+    width: auto;
+  }
