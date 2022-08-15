@@ -1,43 +1,43 @@
-import React from 'react';
+import  React, { Component } from 'react';
 import Button from './Button';
 import '../index.css';
 
 class Group extends React.Component {
-  
-  constructor(props){
-      super(props);
-
-      this.state ={
-        group: props.groupNumber,
-        button: props.buttonNumber
-      };
+  constructor(props) {
+    super(props);
+    this.state = {
+      group: this.props.group,
+      button: this.props.button
+    };
   }
 
-
-  //render
-  renderButtons(n) {
-    var buttons = []
-    for (let i=0; i<n; i++){
-      buttons.push(<Button button={i+1}
-                           onClick={() => this.handleButton(this.props.group, this.props.button)}
-      />);
+  renderGroup() {
+    var groups = []
+    for (let i = 0; i < this.state.group; i++) {
+      groups.push(
+        <div className="group">
+          <h2>Box #{i + 1}</h2>
+          <Button button={this.state.button} />
+        </div>)
     }
-    return buttons;
-  }
-  handleButton(i, j) {
-    alert('This is group #' + {i} + 'and button #' + {j});
-  }
+    console.log("Props is")
+    console.log(this.props)
+    console.log("State is")
+    console.log(this.state)
+    console.log("renderGroup state " + this.state.group)
+    return groups;
 
+  }
 
   render() {
-  
     return (
-      <div className="group">
-        <h2>Box #{this.props.group}</h2>
-        {this.renderButtons(this.props.button)}
-      </div>
-      );
-    }
+      <>
+        {this.renderGroup()}
+        {console.log("render props = " + this.props.group2 + " render state = " + this.state.group)}
+
+      </>
+    );
+  }
 }
-  
-  export default Group;
+
+export default Group;

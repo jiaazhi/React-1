@@ -1,91 +1,100 @@
+:root {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  --section-color: #f2f2f2;
+  --item-color: #ffffff;
+  --hover-color: #1A1A1A;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --gray: #3B3B3B;
+
+}
+
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
-    align-items: center;
-    text-align: center;
-  }
+  margin: 2rem;
+}
+
 .groupDiv {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  display: flex; 
+  border-radius: 1rem;
+  background-color: var(--section-color);
+  padding: 1rem;
+  width: ;
+  display: inline-block;
   justify-content: center;
 }
-  .group {
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    display:grid;
-    background: rgb(255, 255, 255);
-    border: 0px;
-    float: left;
-    font-size: 1rem;
-    line-height: 1rem;
-    margin: 1rem;
-    padding: 1rem;
-    text-align: center;
-    height: auto;
-    width: auto;
-    border-radius: 0.5rem;
-  }
+
+.group {
+
+  background: var(--item-color);
+  display: grid;
+  margin: 1rem;
+  padding: 1rem;
+  height: auto;
+  width: auto;
+  line-height: 1rem;
+  border: 0;
+  float: left;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0rem 0.2rem 0.4rem, var(--shadow-color) 0px 0.1rem 0.2rem;
+
+}
 
 /* CSS */
-.button-28 {
-  appearance: none;
-  background-color: white;
-  border: 1px solid #1A1A1A;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #3B3B3B;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
+button {
   font-weight: 400;
+  background-color: var(--item-color);
+  color: var(--gray);
+  border: 0.1rem solid var(--hover-color);
+  border-radius: 1rem;
+  box-sizing: border-box;
+  display: inline-block;
   margin: 0.5rem 0;
-  min-height: 60px;
+  min-height: 4rem;
   outline: none;
-  padding: 16px 24px;
-  text-align: center;
+  padding: 1rem 1.5rem;
   text-decoration: none;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
   will-change: transform;
 }
 
-.button-28:disabled {
+button:disabled {
   pointer-events: none;
 }
 
-.button-28:hover {
-  color: #fff;
-  background-color: #1A1A1A;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
+button:hover {
+  color: var(--item-color);
+  background-color: var(--hover-color);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0.5rem 1rem;
+  transform: translateY(-0.2rem);
 }
 
-.button-28:active {
+button:active {
   box-shadow: none;
   transform: translateY(0);
 }
 
 
-input {
-padding: 0.2rem 1rem;
-border-radius: 0.5rem;
-font-size: 1rem;
-background: #fbfbfb;
-border: 2px solid transparent;
-height: 36px;
-box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
-}
-input:focus{
-    border: 2px solid #000;
-    border-radius: 4px;
+form {
+  background-color: var(--section-color);
+  padding: 1.5rem;
+  border-radius: 0.4rem;
 }
 
-form {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+input {
+  background: var(--item-color);
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid transparent;
+  height: 2.0rem;
+  box-shadow: 0 0 0 0.1rem var(--section-color), 0 0.2rem 0.4rem 0 var(--shadow-color), 0 0.1rem 0.1rem 0  var(--shadow-color);
+}
+
+input:focus {
+  border: 0.1rem solid #000;
+  border-radius: 0.4rem;
 }
