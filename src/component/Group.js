@@ -10,7 +10,6 @@ class Group extends React.Component {
       button: this.props.button
     };
   }
-
   renderGroup() {
     var groups = []
     for (let i = 0; i < this.state.group; i++) {
@@ -24,20 +23,16 @@ class Group extends React.Component {
     console.log(this.props)
     console.log("State is")
     console.log(this.state)
-    console.log("renderGroup state " + this.state.group)
     return groups;
-
   }
 
   render() {
     return (
       <>
         {this.renderGroup()}
-        {console.log("render props = " + this.props.group2 + " render state = " + this.state.group)}
-
+        {console.log("render props = " + this.props.group + " render state = " + this.state.group)}
       </>
     );
   }
 }
-
 export default Group;

@@ -30,8 +30,15 @@ class Board extends React.Component {
         this.setState({ button: buttonValue });
     }
 
+    printResult() {
+        return  (
+        <div className="groupDiv">
+        {<Group group={this.state.group} button={this.state.button} />}
+        </div>
+        )
+    }
 
-    
+
     handleSubmit(event) {
         //alert('There are ' + this.state.group + ' groups and ' + this.state.button + ' buttons');
         event.preventDefault();
@@ -51,9 +58,7 @@ class Board extends React.Component {
 
                 <p>Number of Groups is {this.state.group}</p>
                 <p>Number of Buttons is {this.state.button}</p>
-                <div className="groupDiv">
-                {<Group group={this.state.group} button={this.state.button} />}
-                </div>
+               {this.printResult()}
 
             </>
         );
